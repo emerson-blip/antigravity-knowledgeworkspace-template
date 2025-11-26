@@ -156,6 +156,39 @@ The AI will automatically:
 - [x] **Phase 6: Dynamic Discovery** (Auto Tool & Context Loading ✅)
 - [x] **Phase 7: Multi-Agent Swarm** (Router-Worker Orchestration ✅)
 
+## 🔥 New: True Zero-Config Tool & Context Loading
+
+**No more manual imports!** The agent now automatically discovers:
+
+### 🛠️ Auto Tool Discovery
+Drop any Python file into `src/tools/` and the agent instantly knows how to use it:
+
+```python
+# src/tools/my_custom_tool.py
+def analyze_sentiment(text: str) -> str:
+    """Analyzes the sentiment of given text.
+    
+    Args:
+        text: The text to analyze.
+        
+    Returns:
+        Sentiment score and analysis.
+    """
+    # Your implementation
+    return "Positive sentiment detected!"
+```
+
+**That's it!** No need to edit `agent.py`. Just restart and the tool is available.
+
+### 📚 Auto Context Loading
+Add knowledge files to `.context/` and they're automatically injected:
+
+```bash
+echo "# Project Rules\nUsefriendly language." > .context/project_rules.md
+```
+
+The agent will follow these rules immediately on next run.
+
 ## 🔥 New: Multi-Agent Swarm Protocol
 
 **Collaborate at scale!** The swarm enables multiple specialist agents to work together:
@@ -207,13 +240,14 @@ print(result)
 ✅ [Reviewer] Review complete!
 🎉 Task Completed!
 ```
-
 ## 👥 Contributors
 
 A massive thank you to the community members who help build this project:
 
 - [@devalexanderdaza](https://github.com/devalexanderdaza) 💻 **(First Contributor!)**
   - Implemented demo tools script and enhanced agent functionality.
+- [@Subham-KRLX](https://github.com/Subham-KRLX) 💻
+  - Added dynamic tools and context loading (Fixes #4)
 
 **Want to contribute?** Check out our [Issues](https://github.com/study8677/antigravity-workspace-template/issues) page!
 ## 💡 Call for Ideas: Swarm Protocol
