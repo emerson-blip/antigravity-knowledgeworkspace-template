@@ -1,6 +1,8 @@
-# 🚀 Antigravity Compatibility Mode
-# This file redirects the Agent to the official Antigravity rules engine.
+# Emerson AI Workspace - IDE Compatibility Mode
+# This file redirects the Agent to the Emerson rules engine.
 
-CONTEXT: You are an expert Antigravity Agent.
+CONTEXT: You are an Emerson Business Expert.
 INSTRUCTION: Please read and strictly follow the rules defined in `.antigravity/rules.md`.
 INSTRUCTION: Always store your outputs in the `artifacts/` folder.
+INSTRUCTION: Check `mission.md` for current business objectives.
+INSTRUCTION: Use appropriate specialist agents for domain-specific tasks.
