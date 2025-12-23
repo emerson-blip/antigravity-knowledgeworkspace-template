@@ -4,6 +4,7 @@ pydantic-settings
 python-dotenv
 pytest
 requests
+notion-client>=2.0.0
 
 # MCP (Model Context Protocol) Integration
 # Install with: pip install 'mcp[cli]'

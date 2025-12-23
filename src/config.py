@@ -66,6 +66,26 @@ class Settings(BaseSettings):
         default="mcp_", description="Prefix for MCP tool names to avoid conflicts"
     )
 
+    # Emerson Notion Configuration
+    NOTION_API_KEY: str = Field(default="", description="Notion Integration Secret")
+    NOTION_PROJECT_ID: str = Field(default="", description="The specific Notion Project ID for this workspace")
+    NOTION_DATABASE_PROJECTS: str = "1ac354a7-949c-8138-82d8-000b3e8c983f"
+    NOTION_DATABASE_TASKS: str = "1ac354a7-949c-814c-a640-000b8b50090a"
+    NOTION_DATABASE_COMPANIES: str = "901d70b9-3c04-4a7a-9cc0-9761c04a7bbb"
+    NOTION_DATABASE_PEOPLE: str = "4bae9ced-3184-4a9f-9896-59cc808931ce"
+    NOTION_DATABASE_OFFERTES: str = "4c95c3fa-217a-4810-bc79-3c9996db14ff"
+    NOTION_DATABASE_FACTUREN: str = "de1c2574-729a-4bda-899b-166f4da50094"
+    NOTION_DATABASE_EVENTS: str = "1c5354a7-949c-8124-974a-000b5c38db4b"
+    NOTION_DATABASE_LOGS: str = "197daeb1-7fbf-446d-a81b-b3ec716196be"
+    NOTION_DATABASE_PROMPTS: str = "4384cf24-c692-413d-ba06-93c935cae521"
+
+    # Obsidian Configuration
+    OBSIDIAN_VAULT_PATH: str = Field(default="", description="The absolute path to the Obsidian Vault")
+
+    # Escalation Settings
+    BUDGET_THRESHOLD: float = 500.0
+    CRITICAL_THRESHOLD: float = 2000.0
+
     model_config = SettingsConfigDict(
         env_file=".env", env_file_encoding="utf-8", extra="ignore"
     )

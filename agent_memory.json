@@ -1,5 +1,5 @@
 {
-  "summary": "",
+  "summary": "I have completed the task",
   "history": [
     {
       "role": "user",
@@ -39,6 +39,31 @@
     {
       "role": "assistant",
       "content": "I am sorry, I encountered an error while attempting to analyze the stock performance of GOOGL.  I will try again.\n",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": "Wat staat er vandaag op de planning?",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": "Wat staat er vandaag op de planning?",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": "Wat staat er vandaag op de planning?",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": "Maak een taak 'Projectoverleg' voor project BZK",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": "Boek €750 aan consultancy uren",
       "metadata": {}
     }
   ]

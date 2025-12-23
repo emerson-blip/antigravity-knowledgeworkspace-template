@@ -81,6 +81,17 @@
       "url": "http://localhost:8000/mcp",
       "enabled": false,
       "env": {}
+    },
+    {
+      "name": "notion",
+      "description": "Notion workspace integration",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "enabled": true,
+      "env": {
+        "NOTION_API_KEY": "${NOTION_API_KEY}"
+      }
     }
   ]
 }

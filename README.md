@@ -9,7 +9,6 @@ Language: [English](README.md) | [中文](README_CN.md) | [Español](README_ES.m
 
 Welcome to the **Antigravity Workspace Template**. This is a production-grade starter kit for building autonomous agents on the Google Antigravity platform, fully compliant with **Antigravity Official Documentation**—and proudly "Anti-LangChain" thanks to its minimal, transparent architecture.
 
-
 ## 🌟 Project Philosophy
 
 In an era rich with AI IDEs, I wanted to achieve an enterprise-grade architecture with just **Clone -> Rename -> Prompt**.
@@ -25,6 +24,7 @@ When using Google Antigravity or Cursor for AI development, I found a pain point
 **IDEs and models are powerful, but "empty projects" are weak.**
 
 Every time we start a new project, we repeat boring configurations:
+
 - "Should my code go in src or app?"
 - "How do I define tool functions so Gemini recognizes them?"
 - "How do I make the AI remember context?"
@@ -72,6 +72,17 @@ sequenceDiagram
     deactivate Agent
 ```
 
+## 📊 Project Status (Live from Notion)
+
+<!-- NOTION_SYNC_START -->
+
+### 📊 Project Status: PRO-202: Kennisbehoefte sector
+- **Status**: Done
+- **Notion Link**: [Open in Notion](https://www.notion.so/PRO-202-Kennisbehoefte-sector-101354a7949c8008bf42d42e7d1bfa47)
+- **Laatste Sync**: Tue Dec 23 10:54:36 CET 2025
+
+<!-- NOTION_SYNC_END -->
+
 ## 🔥 Killer Features
 
 - 🧠 **Infinite Memory Engine**: Recursive summarization automatically compresses history. Context limits are a thing of the past.
@@ -82,17 +93,23 @@ sequenceDiagram
 ## 🚀 Quick Start
 
 ### Local Development
+
 1. **Install Dependencies**:
+
     ```bash
     pip install -r requirements.txt
     ```
+
 2. **Run the Agent**:
+
     ```bash
     python src/agent.py
     ```
 
 ### Docker Deployment
+
 1. **Build & Run**:
+
     ```bash
     docker-compose up --build
     ```
@@ -123,20 +140,39 @@ sequenceDiagram
 Stop writing long system prompts. This workspace pre-loads the AI's cognitive architecture for you.
 
 ### Step 1: Clone & Rename (The "Mold")
+
 Treat this repository as a factory mold. Clone it, then rename the folder to your project name.
+
 ```bash
 git clone https://github.com/study8677/antigravity-workspace-template.git my-agent-project
 cd my-agent-project
-# Now you are ready. No setup required.
 ```
 
-### Step 2: The Magic Moment ⚡️
-Open the folder in Cursor or Google Antigravity.
-- 👀 **Watch**: The IDE automatically detects `.cursorrules`.
-- 🧠 **Load**: The AI silently ingests the "Antigravity Expert" persona from `.antigravity/rules.md`.
+### Step 2: Initialize Your Project 🪄
 
-### Step 3: Just Prompt (No Instructions Needed)
-You don't need to tell the AI to "be careful" or "use the src folder". It's already brainwashed to be a Senior Engineer.
+Run the initialization script to set up your project-specific mission and context.
+
+```bash
+./scripts/init_project.sh
+```
+
+This script will:
+
+- Ask for a **Project Name**.
+- Ask for a **Mission Description** (which will be saved to `mission.md`).
+- Ensure `.context/` and `artifacts/` directories exist.
+- Set up your `.env` file.
+
+### Step 3: The Magic Moment ⚡️
+
+Open the folder in Cursor or Google Antigravity.
+
+- 👀 **Watch**: The IDE automatically detects `.cursorrules`.
+- 🧠 **Load**: The Agent silently ingests the "Antigravity Expert" persona and your specific mission from `mission.md`.
+
+### Step 4: Just Prompt (No Instructions Needed)
+
+You don't need to tell the AI what its project-specific goal is; it already knows from `mission.md`.
 
 **Old Way (Manual Prompting)**:
 > "Please write a snake game. Make sure to use modular code. Put files in src. Don't forget comments..."
@@ -145,6 +181,7 @@ You don't need to tell the AI to "be careful" or "use the src folder". It's alre
 > "Build a snake game."
 
 The AI will automatically:
+
 1. 🛑 **Pause**: "According to protocols, I must plan first."
 2. 📄 **Document**: Generates `artifacts/plan_snake.md`.
 3. 🔨 **Build**: Writes modular code into `src/game/` with full Google-style docstrings.
@@ -164,6 +201,7 @@ The AI will automatically:
 **No more manual imports!** The agent now automatically discovers:
 
 ### 🛠️ Auto Tool Discovery
+
 Drop any Python file into `src/tools/` and the agent instantly knows how to use it:
 
 ```python
@@ -184,6 +222,7 @@ def analyze_sentiment(text: str) -> str:
 **That's it!** No need to edit `agent.py`. Just restart and the tool is available.
 
 ### 📚 Auto Context Loading
+
 Add knowledge files to `.context/` and they're automatically injected:
 
 ```bash
@@ -211,6 +250,7 @@ graph TD
 ```
 
 **Specialist Agents:**
+
 - **Router**: Analyzes tasks, delegates to specialists, synthesizes results
 - **Coder**: Writes clean, well-documented code
 - **Reviewer**: Checks quality, security, best practices
@@ -219,11 +259,13 @@ graph TD
 ### 🚀 Usage
 
 **Run the interactive demo:**
+
 ```bash
 python -m src.swarm_demo
 ```
 
 **Use in your code:**
+
 ```python
 from src.swarm import SwarmOrchestrator
 
@@ -233,6 +275,7 @@ print(result)
 ```
 
 **Example output:**
+
 ```
 🧭 [Router] Analyzing task...
 📤 [Router → Coder] Build a calculator
@@ -276,17 +319,23 @@ sequenceDiagram
 ## 🚀 Quick Start
 
 ### Local Development
+
 1. **Install Dependencies**:
+
     ```bash
     pip install -r requirements.txt
     ```
+
 2. **Run the Agent**:
+
     ```bash
     python src/agent.py
     ```
 
 ### Docker Deployment
+
 1. **Build & Run**:
+
     ```bash
     docker-compose up --build
     ```
@@ -317,7 +366,9 @@ sequenceDiagram
 Stop writing long system prompts. This workspace pre-loads the AI's cognitive architecture for you.
 
 ### Step 1: Clone & Rename (The "Mold")
+
 Treat this repository as a factory mold. Clone it, then rename the folder to your project name.
+
 ```bash
 git clone https://github.com/study8677/antigravity-workspace-template.git my-agent-project
 cd my-agent-project
@@ -325,11 +376,14 @@ cd my-agent-project
 ```
 
 ### Step 2: The Magic Moment ⚡️
+
 Open the folder in Cursor or Google Antigravity.
+
 - 👀 **Watch**: The IDE automatically detects `.cursorrules`.
 - 🧠 **Load**: The AI silently ingests the "Antigravity Expert" persona from `.antigravity/rules.md`.
 
 ### Step 3: Just Prompt (No Instructions Needed)
+
 You don't need to tell the AI to "be careful" or "use the src folder". It's already brainwashed to be a Senior Engineer.
 
 **Old Way (Manual Prompting)**:
@@ -339,6 +393,7 @@ You don't need to tell the AI to "be careful" or "use the src folder". It's alre
 > "Build a snake game."
 
 The AI will automatically:
+
 1. 🛑 **Pause**: "According to protocols, I must plan first."
 2. 📄 **Document**: Generates `artifacts/plan_snake.md`.
 3. 🔨 **Build**: Writes modular code into `src/game/` with full Google-style docstrings.
@@ -366,15 +421,17 @@ The AI will automatically:
 Use any OpenAI-format chat completion endpoint (OpenAI, Azure OpenAI, local Ollama, etc.) to drive the agent with a unified API.
 
 1) Configure environment:
+
 ```bash
 OPENAI_BASE_URL=https://api.openai.com/v1   # or http://localhost:11434/v1 for Ollama
 OPENAI_API_KEY=sk-...                       # leave empty if not required
 OPENAI_MODEL=gpt-4o-mini                    # or your preferred model
 ```
-2) Use the tool:
+
+1) Use the tool:
    - Tool name: `call_openai_chat`
    - Args: `prompt` (str), optional `system`, `model`, `temperature`, `max_tokens`.
-3) Behavior:
+2) Behavior:
    - Follows standard OpenAI `/chat/completions` schema.
    - Returns the text content of the first choice, or an error message on failure.
 
@@ -390,11 +447,13 @@ MCP is an open protocol that standardizes how AI applications connect to externa
 ### 🚀 Quick Setup
 
 **1. Enable MCP in your `.env`:**
+
 ```bash
 MCP_ENABLED=true
 ```
 
 **2. Configure servers in `mcp_servers.json`:**
+
 ```json
 {
   "servers": [
@@ -413,11 +472,13 @@ MCP_ENABLED=true
 ```
 
 **3. Run the agent:**
+
 ```bash
 python src/agent.py
 ```
 
 The agent will automatically:
+
 - 🔌 Connect to configured MCP servers
 - 🔍 Discover available tools
 - 📦 Register them alongside local tools
@@ -510,6 +571,7 @@ Then add it to `mcp_servers.json`:
 **No more manual imports!** The agent now automatically discovers:
 
 ### 🛠️ Auto Tool Discovery
+
 Drop any Python file into `src/tools/` and the agent instantly knows how to use it:
 
 ```python
@@ -530,6 +592,7 @@ def analyze_sentiment(text: str) -> str:
 **That's it!** No need to edit `agent.py`. Just restart and the tool is available.
 
 ### 📚 Auto Context Loading
+
 Add knowledge files to `.context/` and they're automatically injected:
 
 ```bash
@@ -557,6 +620,7 @@ graph TD
 ```
 
 **Specialist Agents:**
+
 - **Router**: Analyzes tasks, delegates to specialists, synthesizes results
 - **Coder**: Writes clean, well-documented code
 - **Reviewer**: Checks quality, security, best practices
@@ -565,11 +629,13 @@ graph TD
 ### 🚀 Usage
 
 **Run the interactive demo:**
+
 ```bash
 python -m src.swarm_demo
 ```
 
 **Use in your code:**
+
 ```python
 from src.swarm import SwarmOrchestrator
 
@@ -579,6 +645,7 @@ print(result)
 ```
 
 **Example output:**
+
 ```
 🧭 [Router] Analyzing task...
 📤 [Router → Coder] Build a calculator
@@ -589,10 +656,10 @@ print(result)
 ✅ [Reviewer] Review complete!
 🎉 Task Completed!
 ```
+
 ## 👥 Contributors
 
 A massive thank you to the community members who help build this project:
-
 
 - [@devalexanderdaza](https://github.com/devalexanderdaza) 💻 🧠 **(First Contributor!)**
   - Implemented demo tools script and enhanced agent functionality.
@@ -610,7 +677,7 @@ A massive thank you to the community members who help build this project:
 
 ## 💡 Call for Ideas: Swarm Protocol
 
-We value **ideas** as much as code! 
+We value **ideas** as much as code!
 We are currently brainstorming the architecture for **Phase 6: Multi-Agent Swarm**. If you provide a solid architectural suggestion or a detailed design that gets adopted, **you will be added to our README as a Contributor**.
 
 Don't hesitate to share your thoughts in the [Issues](https://github.com/study8677/antigravity-workspace-template/issues), even if you don't have time to write the implementation.
